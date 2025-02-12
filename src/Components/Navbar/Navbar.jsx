@@ -30,7 +30,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className={`${theme ? ' text-gray-900' : 'text-white'}`}>
+        <div className={`${theme ? ' text-gray-800' : 'text-white'}`}>
             <div className="navbar shadow-sm fixed opacity-90 z-10 top-0 ">
                 <div className="navbar-start">
                     <div className="dropdown">
