@@ -15,7 +15,7 @@ const AvailableCars = () => {
     })
     return (
         <div className=''>
-            <div className='flex bg-sky-200 p-3 justify-evenly items-center mt-20'>
+            <div className='flex p-3 justify-evenly items-center mt-20'>
               <div className='flex items-center'>
                     <FaSearch className='text-2xl mr-2'></FaSearch>
               <input type="search" placeholder='search car' className='bg-gray-200 px-6'/>

@@ -5,7 +5,7 @@ const Card = ({car}) => {
     console
     return (
         <div>
-            <div className="card bg-base-100  shadow-xl transform hover:scale-105 transition duration-500">
+            <div className="card shadow-xl transform hover:scale-105 transition duration-500">
                 <figure>
                     <img
                         src={imageURL}

@@ -6,7 +6,7 @@ import useAuth from '../../Hooks/useAuth';
 
 const AddCar = () => {
     const axiosPublic = useAxios()
-    const {user} = useAuth()
+    const { user,theme } = useAuth()
     const {
         register,
         handleSubmit,
@@ -43,11 +43,12 @@ const AddCar = () => {
         }
     }
     return (
+        <div className={`${theme ? ' text-gray-300' : ''}`}>
             <div>
                 <div>
                     <h1 className='text-4xl text-rose-500 text-center mt-16'>---Add a Car---</h1>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto ">
+                <div className="card  w-full max-w-sm shrink-0 shadow-2xl mx-auto ">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -65,7 +66,7 @@ const AddCar = () => {
                             <label className="label">
                                 <span className="label-text">Booking Count</span>
                             </label>
-                            <input {...register("bookingCount", { required: true })}  type="number" placeholder="booking Count" className="input input-bordered" required />
+                            <input {...register("bookingCount", { required: true })} type="number" placeholder="booking Count" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -112,14 +113,15 @@ const AddCar = () => {
                             </label>
                             <textarea {...register('description')} placeholder='Description' color='5' rows={5} className='w-full'></textarea>
                         </div>
-                        
+
                         <div className="form-control mt-6">
                             <button className="btn btn-primary hover:rounded-full  w-full">Add Car</button>
                         </div>
                     </form>
                 </div>
             </div>
-       
+        </div>
+
     );
 };
 

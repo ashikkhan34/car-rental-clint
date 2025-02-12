@@ -51,7 +51,7 @@ const MyBooking = () => {
             <div className="overflow-x-auto mt-20">
                 <table className="table">
                     {/* head */}
-                    <thead className='bg-gray-200 hover'>
+                    <thead className=' hover'>
                         <tr>
                             <th>Image</th>
                             <th>Name</th>
@@ -63,7 +63,7 @@ const MyBooking = () => {
                     </thead>
                     <tbody>
                         {
-                            allBookingData?.map(data => <tr key={data._id} className='hover:bg-gray-100'>
+                            allBookingData?.map(data => <tr key={data._id}>
                                 <td>
                                     <img src={data.imageURL} alt="" className='w-20' />
                                 </td>
